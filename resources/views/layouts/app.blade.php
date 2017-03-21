@@ -15,9 +15,21 @@
 
     <!-- Scripts -->
     <script>
-        window.Laravel = {!! json_encode([
+
+        <?php
+             $token = '';
+             $user = Auth::user();
+             if($user !== null)
+             {
+                $token =  $user->createToken('Admin access')->accessToken;
+             }
+        ?>
+        window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
-        ]) !!};
+            'base_url' => url(''),
+             'token' => $token
+        ]); ?>
+        
     </script>
 </head>
 <body>

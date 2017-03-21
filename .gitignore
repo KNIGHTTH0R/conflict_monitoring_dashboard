@@ -9,8 +9,6 @@ Homestead.json
 Homestead.yaml
 .env
 
-
-
 bootstrap/compiled.php
 app/storage/
 
