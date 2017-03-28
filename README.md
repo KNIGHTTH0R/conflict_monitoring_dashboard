@@ -9,3 +9,8 @@ Hate speech monitoring on social media for resolving conflict
 config your database  
 `php artisan migrate`  
 
+	
+`php artisan key:generate`
+`php artisan passport:install`
+`php artisan db:seed`
+
