@@ -18,4 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-
+Route::resource('category','CategoryController');
+Route::resource('facebook_page','Facebook_pageController');
+Route::resource('website','websiteController');
+Route::resource('monitor','monitorController');
